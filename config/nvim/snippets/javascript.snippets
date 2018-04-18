@@ -2,13 +2,12 @@ snippet dcon Deconstruct object
 	const { ${1} } = ${2};
 	${0}
 snippet class Basic class skeleton
-	/*
-		$1
-
-		Class Description
-
-		Usage:
-	*/
+	/**
+	 * ${1:className}
+	 * ${2:Description}
+	 * Usage:
+	 * 
+	 */
 
 	class ${1:ClassName} {
 
@@ -16,19 +15,19 @@ snippet class Basic class skeleton
 
 	}
 snippet classx Class skeleton with extension
-	/*
-		$1 ($2)
-
-		Class Description
-
-		Usage:
-	*/
+	/**
+	 * $1 ($2)
+	 * ${3:Description}
+	 * Usage:
+	 * 
+	 */
 
 	class ${1:ClassName} extends ${2:ParentComponent} {
 
 		${0}
 
 	}
+
 snippet constructor Class constructor function
 	constructor() {
 		super();
@@ -52,7 +51,24 @@ snippet fn Function declaration
 	function ${1:function_name} (${2:params}) {
 		${0}	
 	}
+
 snippet confn Constant function declaration
 	const ${1:function_name} = (${2:params}) => {
 		${0}	
 	};
+
+snippet fncmt Comment block for a function
+	/**
+	 * ${1:functionName} - Description
+	 * @param {type} name - description
+	 * @returns {type} - description
+	 */
+
+snippet classcmt Comment block for a class
+	/**
+	 * ${1:className}
+	 * ${2:Description}
+	 * Usage:
+	 * 
+	 */
+

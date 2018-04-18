@@ -75,6 +75,7 @@ snippet cmp A redux connected React component
 	export default connect(mapState, mapProps)($1);
 
 
+
 snippet cmp Functional React component
 	// $1 - ${2:Component Description}
 	const ${1:MyComponent} = (props) => (
@@ -86,6 +87,7 @@ snippet cmp Functional React component
 	$1.PropTypes = {
 
 	};
+
 
 
 snippet reducer - Redux reducer boilerplate
@@ -135,6 +137,7 @@ snippet cmptest Component test boilerplate
 		});
 	});
 
+
 snippet action Redux action creator
 	export const ${1:actionName} = (dispatch) => (${2:}) => {
 		return new Promise((resolve, reject) => {
@@ -142,3 +145,10 @@ snippet action Redux action creator
 		});
 	};
 
+snippet cmpcmt Comment block for compoennts
+	/**
+	 * ${1:ComponentName}
+	 * ${2:Description}
+	 * Usage:
+	 *     <$1 />
+	 */
