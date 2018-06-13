@@ -61,6 +61,11 @@ snippet cfunc A structure function
 
 snippet struct A structure definition
 	// ${1:StructureName} - ${2:Description}
-	type $2 struct {
+	type $1 struct {
 		${0}
 	} 
+	
+snippet test A test function
+	func Test${1:Name}(t *testing.T) {
+		${0}
+	}
