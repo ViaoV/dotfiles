@@ -43,10 +43,11 @@ snippet readcloser2string Convert an io.ReadCloser to a string
 	${0}
 
 snippet func A public function 
-	// $1 - ${4:Undescribed}
+	// $1 ${4:Undescribed}
 	func ${1:FunctionName} (${2:}) ${3:} {
 		${0}
 	}
+
 
 snippet pfunc A private function 
 	func ${1:functionName} (${2:}) ${3:} {
@@ -54,17 +55,19 @@ snippet pfunc A private function
 	}
 
 snippet cfunc A structure function
-	// ${1:FunctionName} - ${2:Not implemented}
+	// ${1:FunctionName} ${2:Not implemented}
 	func (${3:instance} *${4:Struct}) $1(${5:}) ${6:} {
 		${0}
 	}
 
+
 snippet struct A structure definition
-	// ${1:StructureName} - ${2:Description}
+	// ${1:StructureName} ${2:Description}
 	type $1 struct {
 		${0}
 	} 
 	
+
 snippet test A test function
 	func Test${1:Name}(t *testing.T) {
 		${0}
