@@ -50,6 +50,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'garbas/vim-snipmate'
 Plugin 'ervandew/supertab'
 Plugin 'sebdah/vim-delve'
+Plugin 'tpope/vim-obsession'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
