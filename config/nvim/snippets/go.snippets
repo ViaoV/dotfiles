@@ -68,7 +68,18 @@ snippet struct A structure definition
 	} 
 	
 
+
 snippet test A test function
 	func Test${1:Name}(t *testing.T) {
 		${0}
 	}
+
+snippet model A gorm model
+	// ${1:Name} ${2:Description}
+	type $1 struct {
+		ID           uint      \`gorm:"primary_key"\`
+		CreatedAt    time.Time \`json:"createdAt"\`
+		UpdatedAt    time.Time \`json:"updatedAt"\`
+		DeletedAt    *time.Time \`json:"deletedAt"\`
+	}
+
