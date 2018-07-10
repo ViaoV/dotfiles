@@ -66,14 +66,19 @@ snippet struct A structure definition
 	type $1 struct {
 		${0}
 	} 
-	
-
-
+snippet iface An interface definition
+	// ${1:StructureName} ${2:Description}
+	type $1 interface {
+		${0}
+	} 
 snippet test A test function
 	func Test${1:Name}(t *testing.T) {
 		${0}
 	}
-
+snippet subtest A subtest
+	t.Run("${1:Description}", func(t *testing.T) {
+		${0}
+	})
 snippet model A gorm model
 	// ${1:Name} ${2:Description}
 	type $1 struct {

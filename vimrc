@@ -74,6 +74,11 @@ augroup vimrcEx
 
   " eslint auto format
   autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+  autocmd FileType go nnoremap <buffer> gd :GoDecls<CR>
+  autocmd FileType go nnoremap <buffer> go :GoDoc<CR>
+  autocmd FileType go nnoremap <buffer> ga :GoAlternate<CR>
+  autocmd FileType go nnoremap <buffer> gt :GoTest<CR>
+  autocmd FileType go nnoremap <buffer> gT :DlvClearAll<CR>:DlvAddBreakpoint<CR>:DlvTest<CR>
 
   autocmd vimenter * NERDTree
 
