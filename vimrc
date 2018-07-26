@@ -77,8 +77,14 @@ augroup vimrcEx
   autocmd FileType go nnoremap <buffer> gd :GoDecls<CR>
   autocmd FileType go nnoremap <buffer> go :GoDoc<CR>
   autocmd FileType go nnoremap <buffer> ga :GoAlternate<CR>
-  autocmd FileType go nnoremap <buffer> gt :GoTest<CR>
-  autocmd FileType go nnoremap <buffer> gT :DlvClearAll<CR>:DlvAddBreakpoint<CR>:DlvTest<CR>
+  autocmd FileType go nnoremap <buffer> gtt :GoTest<CR>
+  autocmd FileType go let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+  autocmd FileType go let g:SuperTabClosePreviewOnPopupClose = 1
+  autocmd FileType go nnoremap <buffer> gTT :DlvClearAll<CR>:DlvAddBreakpoint<CR>:DlvTest<CR>
+
+
+  " close preview window when leaving insert mode
+  autocmd CompleteDone * pclos
 
   autocmd vimenter * NERDTree
 

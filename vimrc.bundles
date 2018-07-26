@@ -51,6 +51,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'ervandew/supertab'
 Plugin 'sebdah/vim-delve'
 Plugin 'tpope/vim-obsession'
+Plugin 'mdempsky/gocode', {'rtp': 'nvim/'}
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
