@@ -42,3 +42,5 @@ alias tmc="tmux new -s \$(basename \$(pwd))"
 alias tma="tmux attach-session -t \$(basename \$(pwd))"
 # list tmux sessions
 alias tml="tmux list-sessions"
+
+alias dockerclean='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
